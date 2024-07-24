@@ -2,12 +2,11 @@
 
 * {
     font-family: "Noto Sans JP", sans-serif;
-}
-
-body {
     padding: 0;
     margin: 0;
 }
+
+/* Navbar */
 
 .navbar {
     background: linear-gradient(to right, #03fc7b, #57f7e5);
@@ -67,13 +66,10 @@ body {
     color: #7f8c8d;
 }
 
-.navbar-right{
+.navbar-right {
     display: flex;
-    flex-direction: row;
-}
-
-.navbar-right .login, .cart {
-    padding: 10px;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .navbar-right button {
@@ -89,6 +85,8 @@ body {
     transform: scale(1.2);
 }
 
+/* Main */
+
 main .text {
     display: flex;
     align-items: center;
@@ -99,15 +97,37 @@ main .text {
 main .text p {
     font-size: 24px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 main .images {
+    border: 4px solid black;
+    border-radius: 40px;
+    padding: 4rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 50px 100px;
 }
 
+main .images .ofertas {
+    background: linear-gradient(to left, #df1010, #ff0000);
+    border: 4px solid black;
+    border-radius: 40px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ofertas p {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Benefícios */
 .benefits {
     display: flex;
     justify-content: space-around;
@@ -115,6 +135,7 @@ main .images {
     padding: 20px 0;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 100px;
 }
 
 .benefit-item {
@@ -140,4 +161,61 @@ main .images {
     margin: 0;
     font-size: 0.9em;
     color: #7f8c8d;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #adb5b6;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dev {
+    display: flex;
+    justify-content: center;
+}
+
+.dev p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.social-media .insta,
+.github,
+.linkedin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.social-media a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s all ease;
+}
+
+.social-media span {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.social-media a:hover {
+    color: black;
+    text-decoration: none;
+    transform: scale(1.2);
 }
