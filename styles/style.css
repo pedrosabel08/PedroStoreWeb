@@ -23,9 +23,8 @@
     justify-content: center;
 }
 
-.navbar-left button {
+.navbar-left a{
     color: black;
-    text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     transition: 0.3s all ease;
@@ -34,9 +33,10 @@
     padding: 0 40px;
 }
 
-.navbar-left button:hover {
+.navbar-left a:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    color: #4083c7;
+    text-decoration: none;
 }
 
 .search-box {
@@ -86,6 +86,68 @@
 }
 
 /* Main */
+
+/* Catálogo de opçoes de camisa */
+
+ul.catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid red;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 150px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 25px 0;
+    display: inline-block;
+    transition: 0.3s all ease;
+    font-size: 16px;
+}
+
+ul li a i{
+    margin-left: 10px;
+}
+ul li a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* submenu catálogo */
+
+ul .submenu {
+    position: absolute;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: 0.3s all ease;
+}
+
+ul li:hover .submenu {
+    z-index: 99;
+    opacity: 1;
+    margin-top: 0;
+}
+
+ul .submenu li {
+    margin: 0;
+    width: 100%;
+}
+
+ul .submenu li a {
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
 
 main .text {
     display: flex;
